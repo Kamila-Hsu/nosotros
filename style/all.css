@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif !important;
+    /* "微軟正黑體" sans-serif  */
+    background-image: url(../images/bg.jpg);
+    border: solid #fff 3px;
+    border-radius: 20px;
+    margin: 40px;
+    padding: 10px;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/* helper---------------------------------------- */
+
+.container {
+   width: 1200px;
+   box-sizing: border-box;
+}
+
+.container-md {
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.mx-auto {
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+/* header---------------------------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-head, .header-body, .header-foot{
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+}
+
+.header-head {
+    width: 80px;  
+    /* 不隨著網頁縮放更改大小 */
+}
+
+.header-body {
+  
+}
+
+.header-foot .header-btn-xmark {
+    display: none;
+}
+
+.header-ul {
+    display: flex;
+    background-color: rgba(255, 255, 255);
+    padding: .5rem .5rem;
+    border-radius: 30px;
+} 
+
+.header-li{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header-link{
+    color: #4E5FBF; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9rem;
+    transition-duration: .3s;
+}
+.header-link:hover {
+    background-color: #A7B3D9;
+    border-radius: 30px;
+    padding: .3rem .7rem;
+}
+.header-img {
+    max-width: 100%;
+    height: auto;
+}
+/* banner---------------------------------------- */
+
+.banner-container{
+    display: flex;
+    align-items: center;
+}
+
+.banner-index .banner-head{
+    display: flex;
+    flex-direction: column;  
+}
+
+.banner-title{
+    font-size: 3rem;
+    color: #293fb9dc;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.banner-ul {
+    order: -1;
+    display: flex;
+    margin-left: 2rem;
+    color: rgba(255, 255, 255, .5);
+}
+
+.banner-li {
+    margin-left: .3rem;
+}
+
+.banner-li + .banner-li{
+    position: relative;
+}
+.banner-li + .banner-li ::before {
+    content: "";
+    position: absolute;
+    top: .4rem;
+    left: -.6rem;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, .5); 
+}
+.banner-btns{
+    background-color: #fff;   
+}
+
+.banner-section1  {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+}
