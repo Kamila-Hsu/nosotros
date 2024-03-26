@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+.grid1, .grid2, .grid3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: solid 1px black; */
+    height: 388px;
+    /* gap: 2rem; */
+}
+.grid1, .grid2{
+    margin-bottom: 1rem;
+}
+.grid1{
+    margin-top: 5rem;
+}
+.grid-share {
+    box-sizing: border-box;
+    border-radius: 30px;
+    max-width: 388px;
+}
+.grid-share img{
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin:auto;
+    margin-top: 2.6rem;
+}
+
+.grid1-2, .grid1-3, .grid2-2, .grid2-3, .grid3-2, .grid3-3{
+    margin-left: 0rem;
+}
+.grid1-1,.grid1-2, .grid1-3{
+    background-color: #7da6be;
+}
+.grid2-1,.grid2-2, .grid2-3{
+    background-color: #8c96cc;
+}
+.grid3-1,.grid3-2, .grid3-3{
+    background-color: #999491;
+}
+
+
+.grid2-2 img{
+    border: solid #3b4691 3px;
+    border-radius: 100px 100px 50px 50px;
+}
+.grid3-3 img{
+    margin-top: 7rem;
+}
+
+/* text-------------------- */
+.grid-h3, .JENI-h3{
+    color: #3b4691;
+    font-weight: 700;
+    text-align: center;
+} 
+.grid-h3{
+    margin-top: 5rem;
+    font-size: 1.9rem;
+}
+.grid-desc{
+    color: #3b4691;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+.grid2-desc{
+    color: #574c45;
+}
+
+.text-box, .text-box1,  .text-box2{
+    width: 85%;
+    display: block; 
+    margin:auto;
+}
+.text-box{
+    margin-top: 8rem;
+    position: relative;
+}
+.text-box1{
+    margin-top: .3rem;
+}
+.text-box2{
+    margin-top: 7rem;
+}
+.text-box3{
+    margin-top: 8rem;
+}
+
+.JENI-h3{
+    font-size: 6rem; 
+    margin-top: 6.5rem;
+}
+
+.fa-quote-right, .fa-quote-left{
+    color: #3b4691;
+    font-size: 2rem;
+    position: absolute;
+}
+.fa-quote-right{
+    top: -2rem;
+    right: -.5rem;
+}
+.fa-quote-left{
+    top: 10.7rem;
+    left: -1rem;
+}
+
+/* moible----------------------------------------------------- */
+
+@media screen and (max-width:480px) {
+.grid1, .grid2, .grid3{
+    /* grid-template-columns: repeat(1, 1fr); */
+    display: block;
+    height: auto;
+    padding-top: .1rem;
+    padding-bottom: 3rem;
+    border-radius: 40px;
+}
+.footer-bg{
+    margin-top: 16rem;
+}
+.grid-share img{
+    margin-top: 0rem;
+}
+.grid3-3 img{
+    margin-top: 0rem;
+}
+
+
+.grid1{
+    margin-top: 1rem;
+    background-color: #7da6be;
+}
+.grid2{
+    background-color: #8c96cc;
+}
+.grid3{
+    background-color: #999491;
+}
+
+}

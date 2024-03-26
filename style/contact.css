@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+.page-title{
+    margin-top: 6rem;
+    color: #4E5FBF; 
+    font-size: 10rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tabs{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.tabs li{
+    margin-left: 1rem;
+    text-decoration: underline;
+    padding: .4rem;
+    transition-duration: .3s;
+}
+.tabs li:hover{
+    color: #4E5FBF;
+    text-decoration: none;
+    background-color: #4e5fbf54;
+    border-radius: 20px;
+}
+/* content ------------------------------------*/
+
+hr.divider, hr.divider1, hr.divider2, hr.divider3 {
+    border: 0;
+    height: 2px;
+    background: #333;
+}
+hr.divider1{
+    margin-top: 7rem;
+}
+hr.divider2{
+    margin-top: 2rem;
+}
+hr.divider3{
+    display: none;
+}
+.content{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-hide{
+    display: none;
+}
+.contentA{
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-between;
+}
+.contentA1{
+    margin-bottom: 7rem;
+}
+.contentA2{
+    margin-top: 3rem;
+}
+.contentA-h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.contentA1-p, .contentA1-p2{
+    line-height: 1.3rem;
+}
+.contentA1-p2{
+    margin-right: 2.2rem;
+}
+.contentA2-p{
+    line-height: 1.8rem;
+    margin-right: 5.4rem;
+}
+
+
+/* bottom ------------------------------------*/
+.bottom{
+    /* border: solid 1px black; */
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bottom-left{
+    margin-top: 20rem;
+}
+
+.bottom-h2{
+    color: #4E5FBF; 
+    font-size: 1.1rem; 
+    font-weight: 600;
+}
+.bottom-p{
+    color: #2c3671; 
+}
+.bottom-img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: solid #4E5FBF 4px;
+}
+
+/* mobile -----------------------------------------------------*/
+@media screen and (max-width:480px) {
+
+    .page-title{
+        margin-top: 3.5rem;
+        font-size: 3.5rem;
+    }       
+    .tabs{
+        margin-top: 2rem;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    } 
+    .tabs li{
+        font-size: 1.3rem;
+    }
+    /* content */
+
+    hr.divider1{
+        margin-top: 3rem;
+    }
+    hr.divider2{
+        margin-top: 0rem;
+    }
+    .contentA{
+        display: block;
+        margin-top: 2rem;
+    }
+    .contentA1{
+        margin-bottom: 3rem;
+    }
+    .contentA2{
+        margin-top: 2rem;
+    }
+    .contentA-h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+    .contentA1-p, .contentA1-p2{
+        margin-top: 1rem;
+    }
+    .contentA1-p2{
+        margin-right:0rem;
+    }
+    .contentA2-p{
+        margin-top: 1rem;
+    }
+
+    /* bottom */
+
+    hr.divider3{
+        margin-top: 5rem;
+        display: block;
+    }
+    .bottom{
+        /* border: solid 1px black; */
+        margin-top: 5rem;
+        margin-bottom: 15rem;
+        display: block;
+        width: 80%;
+    }
+    .bottom-left{
+        margin-top: -3rem;
+        margin-bottom: 3rem;
+    }
+    .bottom-h2{
+        font-size: 1.2rem;
+    }
+    .bottom-img{
+        border: solid #4E5FBF 3px;
+    }
+
+    
+
+}
