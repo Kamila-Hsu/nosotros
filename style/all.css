@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -12,19 +12,22 @@ body {
     background-image: url(../images/bg.jpg);
     border: solid #fff 3px;
     border-radius: 20px;
-    margin: 40px;
-    padding: 10px;
+    margin: 40px !important; 
 }
+
 
 img {
     vertical-align: bottom;
 }
 
+.dokdo {
+    font-family: 'Dokdo', system-ui !important;
+}
 /* helper---------------------------------------- */
 
 .container {
-   width: 1200px;
-   box-sizing: border-box;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
 .container-md {
@@ -36,13 +39,20 @@ img {
     margin-left: auto;  
     margin-right: auto;
 }
-
-/* header---------------------------------------- */
-
-.header {
+.index-wrap {
+    display: flex;
+}
+/* index-left---------------------------------------- */
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.index-left {
+     /* justify-content: space-between;  */
+    align-items: center; 
+    /* border: solid 1px black; */
+    width: 70%;
 }
 
 .header-head, .header-body, .header-foot{
@@ -51,22 +61,27 @@ img {
 }
 
 .header-head {
-    width: 80px;  
+    width: 150px;  
     /* 不隨著網頁縮放更改大小 */
 }
-
 .header-body {
-  
+    width: 600px; 
+    /* display: none; */
 }
 
 .header-foot .header-btn-xmark {
     display: none;
 }
-
+.header-button{
+    display: none; 
+}
 .header-ul {
     display: flex;
+    justify-content: space-between;
     background-color: rgba(255, 255, 255);
-    padding: .5rem .5rem;
+    margin-top: 10px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     border-radius: 30px;
 } 
 
@@ -92,20 +107,22 @@ img {
     max-width: 100%;
     height: auto;
 }
-/* banner---------------------------------------- */
 
-.banner-container{
-    display: flex;
-    align-items: center;
-}
+ 
+/* banner---------------------------------------- */
 
 .banner-index .banner-head{
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
 }
 
+
+.banner-head{
+    position: relative;
+}
 .banner-title{
-    font-size: 3rem;
+    font-size: 4rem;
+    text-align: center;
     color: #293fb9dc;
     font-weight: 700;
     margin-left: 2rem;
@@ -115,32 +132,324 @@ img {
 .banner-ul {
     order: -1;
     display: flex;
-    margin-left: 2rem;
-    color: rgba(255, 255, 255, .5);
+    margin-left: 10.5rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    color: rgba(255, 255, 255);
 }
 
 .banner-li {
-    margin-left: .3rem;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 15px;
+    padding: .1rem;
 }
 
 .banner-li + .banner-li{
+    margin-left: .5rem;
     position: relative;
 }
-.banner-li + .banner-li ::before {
+.banner-li + .banner-li::before {
     content: "";
     position: absolute;
-    top: .4rem;
-    left: -.6rem;
+    top: .5rem;
+    left: -.4rem;
     width: 4px;
     height: 4px;
     background-color: rgba(255, 255, 255, .5); 
 }
+.banner-img{
+    max-width: 100%;
+    height: auto;
+    margin-top: -65px;
+    margin-bottom: -70px;
+}
 .banner-btns{
-    background-color: #fff;   
+    position: absolute;
+    top: 5rem;
+    max-width: 100px;
+    height: 90px;
+    background-color: #4E5FBF;
+    border-radius: 0px 20px 20px 37px; 
+    padding: 1rem;
+    margin-top: 2rem;
+    transition-duration: .3s;
+    z-index: 8;
 }
 
-.banner-section1  {
+.banner-btns:hover{
+    background-color: #4e5fbf8c;
+}
+.banner-btn{
+    padding-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+/* index-right---------------------------------------- */
+.index-right{
+    /* max-width: 1200px; */
+    width: 30%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.feature-body{
+    /* border: solid 1px black; */
+    margin-right: 30px; 
+    position: relative;
+}
+.feature1, .feature2, .feature3 {
     background-color: #fff;
-    width: 100px;
-    height: 100px;
+    /* width: 400px;
+    height: 400px; */
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    transition-duration: .3s;
+}
+.feature1:hover, .feature2:hover, .feature3:hover {
+    background-color: #ffffffb2;
+    transform: translateY(-6px);
+}
+.feature1 {
+  top:1rem;
+}
+.feature2 {
+  top:27rem;
+}
+.feature3 {
+  top:53rem;
+}
+.feature-img {
+    max-width: 100%;
+    height: auto;
+    margin-left: -95px;
+    margin-top: 100px;
+    border-radius: 100px;
+}
+.feature-h2{
+    padding-top: 30px;
+    padding-left: 30px;
+    color: #2f43b6;
+    font-weight: 600;
+}
+.feature-p{
+    color: #2f43b6;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 30px;
+    margin-bottom: 40px;
+}
+
+/* footer---------------------------------------- */
+.footer-bg{
+    background-color: #2f43b6a6;
+    border-radius: 0px 0px 20px 20px;
+}
+.footer{
+    margin-top: 14rem;
+    /* border: solid 1px black; */
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 1300px; */
+}
+.footer-h3{
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: #a1adf5;
+}
+.footer-head{
+    display: flex;
+    justify-content: space-between;
+    /* border: solid 1px black; */
+}
+.footer-body{
+    text-align: center;
+}
+.footer-ul{
+    margin-top: 3rem;
+}
+.footer-li{
+    margin-top: .5rem;
+}
+.footer-link{
+    text-decoration: none;  
+    color: #d2d8ff;
+    transition-duration: .3s;
+}
+.footer-link:hover{ 
+    color: #9ba6ee;
+}
+.footer-desc{
+    margin-top: 3rem;
+    color: #d2d8ff;
+}
+.footer-img-logo{
+    margin-top: 7rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* aside---------------------------------------- */
+.aside {
+    position: fixed;
+    right: 2.8rem;
+    bottom: 15rem;
+}
+.aside-link{
+    transition-duration: .3s;
+    color: #0e1c6ec7;
+}
+.aside-link:hover{
+    color: #0e1c6e;
+}
+.aside-link-top{
+    font-size: 3rem;
+}
+
+/* animation---------------------------------------- */
+.feature1{
+    animation-name: feature1up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+@keyframes feature1up {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0px);    
+    }
+}
+.feature2{
+    animation-name: feature2up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+}
+@keyframes feature2up {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0px);    
+    }
+}
+.feature3{
+    animation-name: feature3up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes feature3up {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0px);    
+    }
+}
+
+/* mobile---------------------------------------- */
+@media screen and (max-width:480px) {
+    body {
+        margin: 0;
+        width: 100%; 
+        border: none;
+    }
+
+   .header-head{
+    margin-left: auto;
+    margin-right: auto;
+   }
+   .header-body {
+    display: none;
+}
+
+   .header-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff57;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .header-ul{
+    flex-direction: column; 
+    padding: 2rem 1.5rem;
+   }
+   .header-link{
+    line-height: 1.7rem;
+    display: block;
+    text-align: center;
+    }
+    .header-btn-xmark {
+    position: absolute;
+    color: #0e1c6ecb;
+    top: 21.3rem;   
+    left: 17rem;
+    }
+   .header-foot .header-btn-xmark {
+    display: block;
+    
+}
+   .header-button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 1.6rem;
+   }
+
+/* banner--------- */
+   .banner-btns{
+    width: 60px;
+    height: 70px;
+    margin-top: 5rem;
+}
+   .banner-btn{
+    padding: 0px;
+    font-size: 14px;
+}
+   .banner-title{
+    width: 90vw;
+    margin-left: 1rem;
+}
+
+   .banner-ul {
+    margin-left: 6.5rem;
+    margin-top: -2rem;
+}
+/* footer--------- */
+   .footer{
+    margin-top: -10rem;
+}
+   .footer-head{
+    padding: 0;
+    flex-direction: column; 
+    font-size: 1.6rem;
+   }
+   .footer-h3{
+    font-size: 2rem;
+}
+   .footer-ul, .footer-desc, .footer-h3{
+    text-align: center;
+   }
+   .footer-ul{
+    font-size: 1.3rem;
+   }
+   .footer-img{
+    width: 100px
+   }
 }
